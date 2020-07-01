@@ -1,0 +1,14 @@
+cd =change directory
+ls=list all files 
+ls -a=list all file including hidden
+ls -l=long list of files
+rm <filename>=remove a file 
+rm -r <directory>=to delete directory
+touch=create a file 
+touch .<filename>=create a hidden file 
+mkdir=create a directory/folder
+mv <source> <destination>=move or rename a file
+cp <source> <destination>=copy a file/we can rename copy file 
+cd ..=move backward directory
+cd ../..=move backward twice from present location
+{git concept}
