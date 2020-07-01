@@ -11,4 +11,5 @@ mv <source> <destination>=move or rename a file
 cp <source> <destination>=copy a file/we can rename copy file 
 cd ..=move backward directory
 cd ../..=move backward twice from present location
-{git concept}
+
+
