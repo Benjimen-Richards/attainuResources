@@ -1,0 +1,9 @@
+day 4 lecture 
+
+
+
+practice day 1,2,3,4 commands 
+topics
+1-terminal commands about creation and deleting of file and directories
+2.copy and move of files
+3.git hub branch creation,clone of repo,push,checkout,add,status commands 
