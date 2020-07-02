@@ -1,0 +1,13 @@
+day 3 lecture commands 
+
+
+Commands:
+Git init -> initializes a git repository
+Git status -> shows you the status of the files
+(staging/unstaging)
+Git add <file_a> <file_b> -> adds untracked files (adding
+files to staging area)
+Git commit -> commits files : eg git commit -m “message”
+Git log -> showing logs of commits
+Git diff -> tells you the diff of files in unstaged area
+Git diff --cached -> tells you the diff in the staging area
