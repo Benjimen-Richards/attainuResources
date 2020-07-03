@@ -1,0 +1,10 @@
+What happens when you hit www.google.com in your browser.
+a:
+	when we hit a website.it basically locate it to the domain ip address.the ip address is unique to everywebsite.but to handle it during high loads.the computer is store in vertical arrangements.
+in order to make the website to work for 24 *7.the website data is handle by the cloud handleing companies.
+
+
+What is a dns.
+a:dns stands for domain name server 
+
+	domain name gather the website handling system in to one ip address when makes them work under one roof.domain names are paid in order to acquire them.dns can be fancy and catchy also.(eg:google got domain name as google with ip 8.8.8.8).thy contact ISP then get their ip address and domain name.domain name is unqinue to every company or individuals.
