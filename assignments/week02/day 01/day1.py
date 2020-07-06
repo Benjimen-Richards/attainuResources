@@ -22,6 +22,18 @@ b="richards"
 
 print(a + " "+b)
 
+#printing datatype of variables
+u=2
+i=3
+o=a/b 
+print(type(o))
+
+
+
+
+
+
+
 
 
 
