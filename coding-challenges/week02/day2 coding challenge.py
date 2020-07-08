@@ -9,6 +9,10 @@ s3=int(input("enter english subject marks of the student\n"))
 s4=int(input("enter social subject marks of the student\n"))
 s5=int(input("enter chemistry marks of the student\n"))
 
+if(s1 or s2 or s3 or s4 or s5) >100
+    print("enter valid marks")
+    break
+
 #percentage of the student marks of all the subject
 
 p=(s1+s2+s3+s4+s5)/5
