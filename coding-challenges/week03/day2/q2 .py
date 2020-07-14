@@ -1,3 +1,4 @@
+#anagram
 a=input("enter a string\n")
 b=input("enter a string\n")
 if(sorted(a)==sorted(b)):
