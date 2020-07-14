@@ -1,7 +1,8 @@
-#Write a Python script to generate and print a dictionary
-# that contains a number (between 1 and n) in the form (x, x*x).
-n=int(10)
+#Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
+n=int(input("enter a number\n"))
 x=[i for i in range(1,n+1)]
-print(x)
-for y,x in enumerate(x,1):
-    print(y,x*x)
+if(n<10):
+    for y,x in enumerate(x,1):
+        print(y,x*x)
+else:
+    print("invalid according to question\n")
