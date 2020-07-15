@@ -1,18 +1,15 @@
-class solution:
-   def answer(date:str)->int:
-      a=date.split("-")
-      day=int(a[0])
-      month=int(a[1])
-      year=int(a[2])
-      if month==1:
-         return day
-      calender = [0,31,28,31,30,31,30,31,31,30,31,30,31]
-      if(year%100!=0) or (year%4==0) and (year%100==0):
-         calender[2]=29
-      else:
-         calender[2]=28
-      d=0
-      for i in range(0,month):
-         d=d+calender[i]
-      return d+day
-   print(answer("01-03-2020"))
+a='123'
+b='456'
+array=[a,b]
+print(array)
+map={'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}
+sumarray=[]
+v=0
+for i in array:
+    num=0
+    for char in i:
+        num=num*10+map[char]
+    sumarray.append(num)
+    v+=1
+sum=sumarray[0]+sumarray[1]
+print(str(sum))
