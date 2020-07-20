@@ -3,7 +3,7 @@
 #the runner-up.
 
 n=int(input("enter number of score present in score sheet\n"))
-scoresheet=[1,2,3,3,4,4,5]
+scoresheet=[]
 for i in range(1,n+1):
     print("enter score of ",i,"person")
     x=int(input())
