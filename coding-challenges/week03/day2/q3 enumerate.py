@@ -2,7 +2,7 @@
 n=int(input("enter a number\n"))
 x=[i for i in range(1,n+1)]
 if(n<10):
-    for y,x in enumerate(x,1):
-        print(y,x*x)
+    for x,y in enumerate(x,1):
+        print(x,x*x)
 else:
     print("invalid according to question\n")

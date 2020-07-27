@@ -9,6 +9,7 @@ for i in range(1,n+1):
     x=int(input())
     scoresheet.append(x)
 scoresheet.sort()
+print(scoresheet)
 b=list(dict.fromkeys(scoresheet))
 print("runnerup=",b[-2])
 for i in range(0,len(b)):
