@@ -15,6 +15,6 @@ if __name__ == "__main__":
       print("sorted")
       
    else:
-      print(arr)
+      print(*arr)
       print('not sorted')
       
