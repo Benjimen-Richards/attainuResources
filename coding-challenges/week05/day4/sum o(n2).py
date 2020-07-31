@@ -6,8 +6,7 @@ def sum(a,t):
             sum=a[i]+a[j]
             if sum==t:
                 return [i,j]
-            else:
-                return 'no element adds up to target'
+    return 'none'
 if __name__ == "__main__":
     a=list(map(int,input('enter a list').split()))
     target=int(input('sum element'))
