@@ -5,28 +5,43 @@ class node:
         self.left=None
         self.right=None
 
-def preorder(root):
+def preorder(root,res):
     if root is None:
         return
-    print(root.val)
-    preorder(root.left)
-    preorder(root.right)
+    res.append(root.val)
+    preorder(root.left,res)
+    preorder(root.right,res)
 
-def inorder(root):
+def inorder(root,res):
     if root is None:
         return
-    inorder(root.left)
-    print(root.val)
-    inorder(root.right)
+    inorder(root.left,res)
+    res.append(root.val)
+    inorder(root.right,res)
 
-def postorder(root):
+def postorder(root,res):
     if root is None:
         return
 
-    postorder(root.left)
+    postorder(root.left,res)
     
-    postorder(root.right)
-    print(root.val)
+    postorder(root.right,res)
+    res.append(root.val)
+
+def solve1(root):
+    res=[]
+    preorder(root,res)
+    return res
+
+def solve2(root):
+    res=[]
+    inorder(root,res)
+    return res
+
+def solve3(root):
+    res=[]
+    postorder(root,res)
+    return res
 
 if __name__ == "__main__":
     root=node(2)
@@ -39,9 +54,6 @@ if __name__ == "__main__":
     root.right.right=node(9)
     root.right.right.left=node(4)
     root.right=node(5)
-    print('preorder')
-    preorder(root)
-    print('inorder')
-    inorder(root)
-    print('postorder')
-    postorder(root)
+    print('preorder',solve1(root))
+    print('inorder',solve2(root))
+    print('postorder',solve1(root))
