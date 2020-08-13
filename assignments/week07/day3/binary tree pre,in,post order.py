@@ -44,3 +44,6 @@ if __name__ == "__main__":
     inorder(root)
     print('postorder')
     postorder(root)
+    
+    
+    #to have exact output the values should be intercchange.apart from that i looked in to logic of the code
