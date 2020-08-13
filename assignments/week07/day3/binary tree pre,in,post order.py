@@ -1,4 +1,4 @@
-#preorder ,postorder and inorder
+#print preorder ,postorder and inorder of given tree
 class node:
     def __init__(self,val):
         self.val=val
