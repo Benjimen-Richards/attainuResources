@@ -24,8 +24,9 @@ def postorder(root):
         return
 
     postorder(root.left)
-    print(root.val)
+    
     postorder(root.right)
+    print(root.val)
 
 if __name__ == "__main__":
     root=node(2)
