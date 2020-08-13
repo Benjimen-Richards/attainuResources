@@ -57,3 +57,5 @@ if __name__ == "__main__":
     print('preorder',solve1(root))
     print('inorder',solve2(root))
     print('postorder',solve1(root))
+    
+    
