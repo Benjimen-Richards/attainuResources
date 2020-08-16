@@ -5,15 +5,15 @@ class node:
 def cloning(head):
     mapping=dict()
     cur=head
-    c=None
+    cloned_list=None
     prev=None
     while cur!=None:
         n=node(cur.val)
         mapping[cur]=n
-        if c is None:
-            c=n
-            prev=c
-            mapping[cur]=c
+        if cloned_list is None:
+            cloned_list=n
+            prev=cloned_list
+            mapping[cur]=cloned_list
         else:
             prev.Next=n
             prev=prev.Next
@@ -27,7 +27,7 @@ def cloning(head):
             #x.random=y                                            [IT SHOULD BE UTILISED IN THIS PROGRAM ]
         #cur=cur.Next                                              [OTHER THAN THAN THE CONCEPT IS CLEAR]  
   
-    return c
+    return cloned_list
     
 
 def display(head):

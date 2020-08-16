@@ -22,10 +22,10 @@ def reverse(head):
     cur=head
     prev=None
     while cur:
-        abc=cur.next
+        new=cur.next
         cur.next=prev
         prev=cur
-        cur=abc
+        cur=new
     return prev
     
     
