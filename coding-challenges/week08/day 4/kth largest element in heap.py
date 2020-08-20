@@ -28,7 +28,7 @@ class heap:
 
     def heap_sort(self):
         res=[]
-        for i in range(len(array)-1):
+        for i in range(len(array)):
             res.append(self.poping_element())
         return res
     def poping_element(self):
