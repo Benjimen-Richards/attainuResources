@@ -1,7 +1,7 @@
 def solve(coins,amount):
     dp=[0]+[float('inf')]*(amount+1)
     for coin in coins:
-        for val in range(amount+1):
+        for val in range(coin,amount+1):
             dp[val]=min(dp[val],dp[val-coin]+1)
     if dp[amount]!=float('inf'):
         return dp[amount]
