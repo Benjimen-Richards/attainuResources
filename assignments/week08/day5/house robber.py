@@ -2,7 +2,7 @@ def total(nums):
     c,m=0,0
     for i in nums:
         print(f'1st c={c},m={m},i={i}')
-         c,m=m,max(c+i,m)
+        c,m=m,max(c+i,m)
     return m
 
 if __name__ == "__main__":

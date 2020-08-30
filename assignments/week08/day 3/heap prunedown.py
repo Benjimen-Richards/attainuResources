@@ -47,5 +47,7 @@ if __name__ == "__main__":
     h=heap(array)
     h.build()
     h.heap_sort()
+    h.poping_element()
+    h.build()
 
 
