@@ -1,0 +1,4 @@
+Q:Explain the main purpose of an operating system?
+Ans:Operating system is used to manage inputs and outputs of the users.
+->OS manages the computer's memory and processes,as well as all of its software and hardware. 
+->It also allows you to communicate with the computer without knowing how to speak the computer's language.
