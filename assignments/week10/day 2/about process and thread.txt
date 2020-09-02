@@ -1,0 +1,21 @@
+Q:Elaborate and explain with a diagram difference between processes and threads?
+ans:
+PROCESS:->A process is an active program i.e. a program that is under execution. 
+	It is more than the program code as it includes the program counter, process stack, registers, program code etc. 
+	Compared to this, the program code is only the text section.
+
+THREAD:->A thread is a lightweight process that can be managed independently by a scheduler.
+	It improves the application performance using parallelism. A thread shares information like data segment, code segment, files etc.
+	with its peer threads while it contains its own registers, stack, counter etc.
+
+
+SOME KEY DIFFERENCES BETWEEN PROCESS AND THREAD ARE:
+1:Process being a heavyweight process so it takes more time to execute as compared to thread
+
+2:Processes are totally independent and don’t share memory whereas thread is not.
+
+3:Thread blocks all its execution when one of its sequence is blocked.whereas process is not.
+
+4:process needs more resources than threads whereas thread needs less resources.
+
+5:Process needs more time for termination than thread
