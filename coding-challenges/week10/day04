@@ -1,0 +1,7 @@
+there are four components
+
+Events: Events are the conditions which must exist for the process to be performed
+Tasks: A task is the smallest unit into which the activity can be broken down.
+Decisions: There might be certain decisions which may have to be taken as the part of a process. Leaving the decisions up to the people involved has undesirable consequences.
+Inputs&output: Until gives inputs, a process cannot function.
+     example:people,raw materials
