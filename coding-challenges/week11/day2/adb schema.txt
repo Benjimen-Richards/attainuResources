@@ -1,0 +1,15 @@
+Q:List down all the features of adb schema for a food delivery startup like Zomato/Swiggy
+Ans:zomato features->
+	1:zomato has table booking 
+	2:zomato has wide range of resturants to select
+	3:zomato offers premium subscriptions to their customers where they get discount on their bill on selected resturants
+	4:zomato offers self pickup service
+	5:live tracking 
+	6:order cancellation services
+	7:uses google maps database to provide live tracking
+    swiggy->
+	1:no minimum order
+	2:fast delivery
+	3:live tracking
+	4:order cancellation services
+	5:uses google maps database to provide live tracking 
