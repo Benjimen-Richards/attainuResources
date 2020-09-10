@@ -1,0 +1,29 @@
+q: Design Amazon e-commerce web app
+ans:
+
+Frontend
+----------
+->userprofile-(name,account,address,orders)
+->product thumbnails
+->seller details
+->product measurement details
+->delivery time to pincode
+->prime and non prime
+
+
+
+Backend
+----------
+->seller order notifications
+->product price details
+->availability of product
+->product measurement availiability
+->
+
+Secondary server
+----------
+->product details
+->seller data
+->images
+->addresses
+->product data

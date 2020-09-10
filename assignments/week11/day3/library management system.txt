@@ -1,0 +1,17 @@
+q: Design a Library Management System
+ans:
+Frontend
+->Book thumbnails
+->Books location in libray
+->Books availability
+->User Book details
+->availibility and non-availibility
+->book ratings
+->book summary
+-------
+Backend
+-------
+->who has the book details
+->book details(author,summary,ratings,publised by and date of published)
+
+
