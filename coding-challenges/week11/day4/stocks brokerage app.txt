@@ -1,0 +1,27 @@
+Q:Design an online stock brokerage app
+Ans:
+Frontend
+--------
+->profile details
+->stocks 
+->stocks pricing 
+->stocks stats
+->stocks ordered
+->Profit and loss on stocks till date 
+->ordered stocks withdrawl
+
+Backend
+--------
+->fetch userdetails
+->fetch company stocks details
+->referal link of stock in secondary server
+	->stocks stats
+	->ordered stocks details(history and present)
+->withdrawl of stocks
+	->it calculates the present price of the stocks and reflect the amount in user details 
+	 
+
+secondary database
+---------
+->data of stocks stats
+->data of stocks ordered(history and present)
