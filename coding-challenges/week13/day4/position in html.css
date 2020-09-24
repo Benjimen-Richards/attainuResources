@@ -24,8 +24,9 @@
     width: 25%;
     text-align: center;
     position: absolute;
-    bottom: 0px;
-    right: 5px;
+    left: 1px;
+    top: 0px;
+    
 
 }
 .d{
@@ -35,9 +36,7 @@
     width: 25%;
     text-align: center;
     position:fixed;
-    bottom: 0px;
-    left: 0px;
-
+    
 }
 body{
     background-color: bisque;
