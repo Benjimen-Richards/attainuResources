@@ -1,0 +1,44 @@
+.a{
+    background-color:olive;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    
+}
+.b{
+    /*Relative is similar to static where the position is moved w.r.t the sibiling child*/
+    display: inline-block;
+    width: 25%;
+    background-color:red;
+    position: relative;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.c{
+    /*Absolute position positions the text w.r.t body or the next parent in 
+    the body*/
+    background-color:violet;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+
+}
+.d{
+    /*Fixed position positions the object w.r.t the viewpoint of the user*/
+    background-color:aquamarine;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+
+}
+body{
+    background-color: bisque;
+}
