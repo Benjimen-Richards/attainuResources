@@ -1,0 +1,55 @@
+body{
+    font-size:20px;
+    background-color: blanchedalmond;
+}
+ul{
+    list-style: round;
+}
+li{
+    background-color: beige;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+
+}
+
+a{
+    margin: 40px;
+}
+a:hover{
+    color: burlywood;
+    transition: color 0.5s ease;
+
+}
+a:active{
+    color: crimson;
+    
+}
+a:visited{
+    color: darkgrey;
+}
+input{
+    padding: 5px;
+
+}
+input:focus{
+    outline:5px solid yellowgreen;
+    
+    
+}
+li:hover{
+    background-color:brown;
+    color: cyan;
+}
+button:hover{
+    transform: rotate(140deg);
+    transition: transform 0.5s ease;
+}
+input:hover{
+    color: rebeccapurple;
+    transform: rotate(50deg);
+    transition: transform 0.5s ease;
+}
