@@ -1,0 +1,45 @@
+<!-- Create a list of all your friends at AttainU with html (names and hometown).
+Manipulate their hometowns with a script where you overwrite everyone’s hometown with ‘Bangalore’. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overwriting with js</title>
+    <link href="./overwrite.js"/>
+</head>
+<body>
+    <h1>Friend list</h1>
+    <ul class='friend_list'>
+        <li class="Name">Arif</li>
+        <li class="Name">Richards</li>
+        <li class="Name">Bhanu</li>
+        <li class="Name">Shiva</li>
+        <li class="Name">Jain</li>
+    </ul>
+    <h1>hometown</h1>
+    <ul class='friend_list'>
+        <li class="hometown">Rajasthan</li>
+        <li class="hometown">Bangalore</li>
+        <li class="hometown">Mumbai</li>
+        <li class="hometown">Hyderabad</li>
+        <li class="hometown">Delhi</li>
+    </ul>
+    <button onclick="ButtonClick()">Change HomeTown</button>
+    <script>
+        function ButtonClick()
+        {
+            var x=document.querySelectorAll('.hometown')
+            for (let i = 0; i < x.length ; i ++)
+            {
+                x[i].innerHTML='Bangalore'
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
