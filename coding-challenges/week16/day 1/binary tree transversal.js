@@ -1,85 +1,107 @@
-class Node
+class tree
 {
     constructor(val)
     {
-        this.val=val
-        this.right=null
-        this.left=null
+        this.val = val
+        this.right = null
+        this.left = null
     }
 }
-class binary
+
+class Binary
 {
     constructor()
     {
-        this.root=null
+        this.root = null
     }
     insert(data)
     {
-        let node = new Node(data)
-        let cur= this.root
-        if (cur == null)
+        let node = new tree(data)
+        if (!this.root)
+            this.root = node
+        else
+            this.insert_element(this.root,node)
+    }
+    insert_element(root,node)
+    {
+        if (node.val < root.val)
         {
-            cur = node
-        }
-        else{
-            if (data < cur.val)
+            if (root.left === null)
             {
-                if (cur.right==null)
-                {
-                    cur.left = node
-                }
-                else
-                {
-                    this.insert (cur.right,node)
-                }
-
+                root.left = node
             }
             else
+                this.insert_element(root.left,node)
+        }
+        else
+        {
+            if (root.right === null)
             {
-                if ( cur.left == null)
-                {
-                    cur.right = node
-                }
-                else
-                {
-                    this.insert(cur.left , node)
-                }
+                root.right = node
             }
+            else
+                this.insert_element(root.right,node) 
         }
     }
-    getHeight()
+    getroot()
     {
-        left=this.getHeight(root.left)
-        right=this.getHeight(root.right)
-        return (left + right +1)
+        return this.root
     }
-    levelorder(root,i,temp)
+    preorder(root)
     {
-        if(root == null)
+        if (root)
+        {
+            console.log(root.val)
+            this.preorder(root.left)
+            this.preorder(root.right)
+        }
+    }
+    getheight(root)
+    {
+        if (!root)
+            return 0
+        else
+        {
+            return Math.max(this.getheight(root.left),this.getheight(root.right))+1
+        }
+    }
+    level_order(root)
+    {
+        let h=this.getheight(root)
+        for (let i = 0;i<=h+1;i++)
+        {   
+            let temp = []
+            print_level(root,i)
+        }
+    }
+    print_level(root,level,temp)
+    {
+        if(!root)
+        {
             return
-        if (level==1)
+        }
+        if (level === 1)
         {
             temp.push(root.val)
-            return
         }
-        this.levelorder(root.left,i-1,temp)
-        this.levelorder(root.right,i-1,temp)
     }
-    printLevelorder()
-    {
-        h=this.getHeight()
-        for(i=1;i<h+1;i++)
-        {
-            temp=[]
-            this.levelorder(this.root,i)
-        }
-        console.log(temp)
-    }
+
+
+
 }
-const BST=new binary(3)
-BST.insert(4)
-BST.insert(5)
-BST.insert(2)
-BST.insert(1)
-BST.insert(9)
-BST.printLevelorder()
+var BST = new Binary()
+BST.insert(15); 
+BST.insert(25); 
+BST.insert(10); 
+BST.insert(7); 
+BST.insert(22); 
+BST.insert(17); 
+BST.insert(13); 
+BST.insert(5); 
+BST.insert(9); 
+BST.insert(27); 
+                      
+var root = BST.getroot()
+BST.preorder(root)
+console.log('tree height is:')
+console.log(BST.getheight(root))
