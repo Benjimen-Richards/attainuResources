@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="./calculator.css" rel="stylesheet"/>
+</head>
+<body>
+    <script>
+        function addition()
+        {
+            var str1=document.getElementById('input1').value
+            var str2=document.getElementById('input2').value
+            var sum=parseInt(str1)+parseInt(str2)
+            document.getElementById('input3').value=sum
+        }
+        function subtraction()
+        {
+            var str1=document.getElementById('input1').value
+            var str2=document.getElementById('input2').value
+            var sum=parseInt(str1)-parseInt(str2)
+            document.getElementById('input3').value=sum
+        }
+        function multiply()
+        {
+            var str1=document.getElementById('input1').value
+            var str2=document.getElementById('input2').value
+            var sum=parseInt(str1)*parseInt(str2)
+            document.getElementById('input3').value=sum
+        }
+        function division()
+        {
+            var str1=document.getElementById('input1').value
+            var str2=document.getElementById('input2').value
+            var sum=parseInt(str1)/parseInt(str2)
+            document.getElementById('input3').value=sum
+        }
+    </script>
+    <div class="container">
+        <h1 class="header">JS calculator</h1>
+        <div>
+            <input id="input1" placeholder="Enter 1st number"/>
+        </div>
+        <div>
+            <input id="input2" placeholder="Enter 2nd number"/>
+        </div>
+        <div class="operations">
+            <button onclick="addition()" id='addition'>+</button>
+            <button onclick="subtraction()"  id='subtraction'>-</button>
+            <button onclick="multiply()"  id='multiply'>*</button>
+            <button onclick="division()"  id='division'>/</button>
+        </div>
+        <div>
+            <input id="input3" />
+            
+        </div>
+    </div>
+</body>
+</html>
