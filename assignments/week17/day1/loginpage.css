@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    top: 50px;   
+}
+form{
+    position: absolute;
+    width: 50vh;;
+    height:50vh;
+    border: 1px solid black;
+    background-color: lightgrey;
+}
+div{
+    position: absolute;
+    left: 50px;
+    top: 70px;
+    
+
+}
+
+#username{
+    margin: 5px;
+    padding: 5px;
+}
+#password1{
+    margin: 5px;
+    padding: 5px;
+}
+button{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+}
+

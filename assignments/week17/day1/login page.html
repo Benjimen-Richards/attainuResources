@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="./loginpage.css" rel="stylesheet"/>
+</head>
+<body>
+    <script>
+        function validate()
+        {   
+            
+            var ele=document.querySelector('#message')
+            
+            var a=document.querySelector('#password1').value
+            if ( a == ' ')
+            {   
+                    ele.innerHTML='Password isempty'
+                    return false
+            }
+            else if ( a.length < 5)
+            {
+                    ele.innerHTML='Password istoo small'
+                    return false
+            }
+            else if ( a.length > 25)
+            {
+                    ele.innerHTML='Password istoo long'
+                    return false
+            }
+            else
+            {
+                    alert('Given Username andpassword are validated')
+                    return true
+            }                
+        
+    }
+        
+            
+    </script>
+    <form >
+      <div class="inputs">
+        USERNAME<input id='username' type="email" />
+        PASSWORD<input type="password" id='password1' aria-required="true" />
+        <span id="message" style="color: brown; font-size: small; text-transform: uppercase;font-size: large;" > </span>
+        
+      </div>
+      <button class="btn" onclick="return validate()">login</button>
+    </form>
+</body>
+</html>
