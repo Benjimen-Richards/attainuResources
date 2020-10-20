@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stack emulator</title>
+    <link href="./stack.css" rel="stylesheet"/>
+</head>
+<body>
+    <script>
+        var str=[]
+        function push()
+        {
+            
+            var a=document.querySelector('input').value
+            var message=document.querySelector('.updated_list')
+            str.push(a)
+            message.innerHTML=str.join(' ')
+        }
+        function pop()
+        {
+            var a=document.querySelector('input').value
+            var message=document.querySelector('.updated_list')
+            str.pop()
+            message.innerHTML=str.join(' ')
+        }
+    </script>
+
+    <div class="container">
+        <h2 class="header">STACK EMULATOR</h2>
+        <hr>
+        <div class="a">
+        <input placeholder="Number"/>
+        </div>
+        <div class="btn">
+            <button class="psh" onclick="push()">push</button>
+            <button class="pp" onclick="pop()">pop</button>
+        </div>
+        <p >Current stack element</p>
+        <span class="updated_list">
+            Stack element here
+        </span>
+    </div>
+</body>
+</html>
