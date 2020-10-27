@@ -7,5 +7,5 @@ def bubblesort(b):
 if __name__ == "__main__":
     a=[23,54,12,86,3,0.2,56,87,4,2,6]
     bubblesort(a)
-    a=[int(i) for i in a]
+    # a=[int(i) for i in a]
     print(a)
