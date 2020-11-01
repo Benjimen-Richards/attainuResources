@@ -13,14 +13,13 @@
   <title>Chomp-Champ</title>
   <style>
     
-}
   </style>
 </head>
 
 <body>
 
   <div class=".container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
       <a class="navbar-brand" href="#">Chomp-Champ</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +31,10 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Cities
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Hyderabad</a>
@@ -52,11 +48,7 @@
           </li>
   
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" style="border-radius: 10px;width: 300px;" type="search"
-            placeholder="Enter your search......" aria-label="Search">
-          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-        </form>
+  
         <div class="mx-2">
           <button class="btn btn-danger" data-toggle="modal" data-target="#LoginModal">Login</button>
           <button class="btn btn-danger" data-toggle="modal" data-target="#SignupModal">Signup</button>
@@ -146,11 +138,22 @@
           <h3>Best restaurants in India delivering to your doorstep
           </h3>
         </div>
-        <div>
-          <div class="input-group mb-3">
-            <input style="height: 50px;,font-size: 20px;" type="text" class="form-control" placeholder="Enter restaurants" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            </div>
+        <div class="Ajax_search_box">
+          <div class="row mt-5">
+              <div class="col-md-6">
+                  <input type="text" class="form-control" id="search-query" name="search-query" placeholder="Enter Restaurant name"/>
+              </div>
+              
           </div>
+          <div class="row_search">
+              <div class="col-md-6 mt-2 search-results-text">
+                  Search Results 
+              </div>
+          </div>
+          <div>
+              <ul id="search-results"></ul>
+          </div>
+      </div> 
         </div>
       </div>
         
@@ -430,7 +433,40 @@
    
       <img style="width: 500px;" src="https://resources.platform.iplt20.com/photo-resources/2020/09/20/38d95c88-e075-4512-93e9-d2642d3c6305/IPL-2020-Match-3-SRH-vs-RCB.jpg?width=1200&height=630"/>
   </div>
-
+  <!-- 4 columns
+    - Company (links) - link to About Us page
+    - Careers (links)
+    - Social (icons)
+    - Contact (links) -->
+    <footer>
+      <!-- elemwnts of company career social and contact -->
+        <div class="Row1">
+            <div class="header_items"><a style="text-decoration: none;" href="./About us.html">Company</a></div>
+            <div class="header_items"><a style="text-decoration: none;"  href="https://careers.swiggy.com/">Careers</a></div>
+            <div class="header_items"><a style="text-decoration: none;" href="https://www.swiggy.com/support">Social</a></div>
+            <div class="header_items"><a style="text-decoration: none;" href="https://www.swiggy.com/support">Contact</a></div>
+            <div class="header_items"><a href="#"><img id='google_play' style="width: 150px;,height: 100px;" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/></a></div>
+        </div>
+        <!-- copyright elements -->
+          <div class="Row2">
+            <div class="copyright_text">
+              <p id = 'copyRightText'
+              ;">&forall;2020Chomp-Champ</p>
+            </div>
+            <div class="copyright_social_img">
+                <div id="social_img">
+                  <a href="#"><img style="width: 40px;,height: 40px;" src="https://i.pinimg.com/originals/ef/b5/d9/efb5d90eeb07bb5914f094007da4c2f7.png"/></a>
+                </div>
+                <div id="social_img">
+                  <a href="#"><img style="width: 40px;,height: 40px;"src="https://www.designbust.com/download/171/png/instagram_logo_color_icon512.png"/></a>
+                </div>
+                <!-- <div id="social">
+                  <a class="social" href="#"><img style="width: 40px;,height: 40px;" src="https://cdn.iconscout.com/icon/free/png-256/twitter-213-569318.png"/></a> -->
+                </div>
+            </div>
+        </div>
+      </footer>
+  
 
 
 
