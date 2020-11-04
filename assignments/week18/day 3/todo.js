@@ -6,6 +6,7 @@ function postmodel()
         $.ajax
         ({
             url : todo,
+            type : 'get',
             success : function(data)
             {
                 for ( i = 0 ; i < data.length ; i++)
