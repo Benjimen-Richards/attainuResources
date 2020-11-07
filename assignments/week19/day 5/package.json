@@ -1,0 +1,22 @@
+{
+  "name": "es6-setup",
+  "version": "1.0.0",
+  "description": "{\r \t\"presets\": [\"@babel/preset-env\"],\r \t\"plugins\": [\"@babel/plugin-proposal-class-properties\"]\r }",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-watch": "^7.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "babel-watch ./src/index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && npm run babel-build",
+    "babel-build": "babel -d ./dist ./src -s",
+    "clean": "rimraf ./dist && mkdir dist"
+  },
+  "author": "benjimen richards",
+  "license": "ISC"
+}
