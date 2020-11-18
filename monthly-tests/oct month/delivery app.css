@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 100%;
+  overflow-x: auto;
+}
+a.dropdown-item:hover,
+a.dropdown-item:active {
+  background-color: orange;
+  color: blueviolet;
+}
+.container {
+  box-sizing: border-box;
+  position: relative;
+}
+footer {
+  padding: 10px;
+  position: absolute;
+  padding-top: 40px;
+  width: 100%;
+  height: 25%;
+  right: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.Row1 {
+  padding: 30px;
+  width: 170vh;
+  /* height: 100px; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.header_items {
+  /* background-color: blue; */
+  width: 300px;
+  height: 50px;
+  align-items: center;
+}
+.header_items a {
+  color: white;
+  text-decoration: none;
+}
+.header_items a:hover {
+  font-size: 20px;
+  transition: font-size 0.5s ease;
+}
+.Row2 {
+  padding-left: 50px;
+  display: flex;
+  margin-left: 0;
+  background-color: black;
+  justify-content: space-between;
+}
+#copyRightText {
+  font-size: 20px;
+  color: grey;
+}
+.copyright_social_img {
+  /* background-color: honeydew; */
+  display: flex;
+  width: 250px;
+}
+#social_img {
+  margin: 10px;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 0;
+  padding: 10px;
+}
+.title_img {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: inherit;
+}
+.innerText {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 200px;
+  color: white;
+}
+.restaurants {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 30px;
+}
+.restaurants .card {
+  margin: 10px;
+  border-radius: 20px;
+}
+.restaurants2 {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 30px;
+}
+.restaurants2 .card {
+  margin: 10px;
+  border-radius: 20px;
+}
+.Order_menu {
+  width: 300px;
+}
+.working {
+  /* border: 1px solid black; */
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.Trending {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 30px;
+}
+.Trending .card {
+  margin: 10px;
+  border-radius: 20px;
+}
+.ipl {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+.ipl img {
+  padding: 10px;
+}
+.pubs {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+.pubs img {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
