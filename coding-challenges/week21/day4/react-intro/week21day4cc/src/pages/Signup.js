@@ -10,7 +10,7 @@ class Signup extends React.Component {
         name: "email",
         value: "",
         isRequired: true,
-        nameError: "",
+        error: "",
       },
       password: {
         name: "password",
@@ -32,39 +32,52 @@ class Signup extends React.Component {
         value: false,
         isRequired: true,
       },
-      error: "",
+      error: true,
     };
 
     // this.validationHandler = this.validationHandler.bind(this)
   }
 
   validationHandler(key) {
-    let nameError = "";
-    if (!this.state.email.name) {
-      nameError = "name cannot be blank";
-    }
-    if (nameError) {
-      this.setState({ nameError });
+    const keyInfo = this.state[key];
+    if (keyInfo.isRequired && !keyInfo.value) {
+      this.setState({
+        [key]: {
+          ...this.state[key],
+          error: "fill the above field",
+        },
+        error: true,
+      });
+    } else {
+      this.setState({
+        [key]: {
+          ...this.state[key],
+          error: "",
+        },
+        error: false,
+      });
     }
   }
 
   onSubmitHandler = (event) => {
-    const valid = this.validationHandler();
-    if (valid) {
-      console.log(this.state);
+    if (event) {
+      console.log("INSIDE IF CLASS BLOCK");
+      event.preventDefault();
     }
+    console.log(count);
+    console.log(this.state);
   };
 
-  inputChangehandler = (key, value) => {
+  inputChangehandler = (name, value) => {
     this.setState(
       {
-        [key]: {
-          ...this.state[key],
+        [name]: {
+          ...this.state[name],
           value: value,
         },
       },
       () => {
-        this.validationHandler(key);
+        this.validationHandler(name);
       }
     );
   };

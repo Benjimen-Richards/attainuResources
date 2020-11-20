@@ -17,7 +17,7 @@ const SignupForm = (props) => {
           placeholder="Enter Email"
           name={formInfo.email.name}
           value={formInfo.email.value}
-          onChange={(e) => changeHandler(e.target.name, e.target.value)}
+          onChange={(e) => props.changeHandler(e.target.name, e.target.value)}
         />
         <span>{formInfo.email.error}</span>
         <br />
