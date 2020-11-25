@@ -1,18 +1,19 @@
-def longestCommonPrefix(strs):
-    s = ""
-    if len(strs) == 0:
-        return s
-    elif len(strs) == 1:
-        return strs[0]
+def longestCommonPrefix(wordlist):
+    length = len(wordlist)
+    str = ' '
+    if not length:
+        return wordlist
+    if length == 1:
+        return wordlist[0]
 
-    for a in range(len(min(strs))):
-        for b in range(1, len(strs)):
-            if strs[0][a] == strs[b][a]:
-                if b == len(strs)-1:
-                    s += strs[0][a]
+    for x in range(len(min(wordlist))):
+        for y in range(1, length):
+            if(wordlist[0][x] == wordlist[y][x]):
+                if y == length-1:
+                    str += wordlist[0][x]
             else:
-                return s
-    return s
+                return str
+    return str
 
 
 if __name__ == "__main__":
