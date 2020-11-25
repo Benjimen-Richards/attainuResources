@@ -15,6 +15,9 @@ const Menu = () => {
         <Link to="/contact" style={{ textDecoration: "none" }}>
           Contact
         </Link>
+        <Link to="/users" style={{ textDecoration: "none" }}>
+          Users
+        </Link>
         <Footer />
       </div>
     </div>
