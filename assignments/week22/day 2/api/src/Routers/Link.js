@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-const Menu = () => {
+
+const Linking = () => {
   return (
-    <>
+    <div>
+      <h1>hello</h1>
       <Link to="/">Home</Link>
       <Link to="/users">Users</Link>
-    </>
+    </div>
   );
 };
-export default Menu;
+export default Linking;

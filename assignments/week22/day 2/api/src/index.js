@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-// import Userdata from "./Week22day2/Userdata";
 import { BrowserRouter } from "react-router-dom";
-import Routers from "./Week22day2/Routers";
+import Routers from "./Routers/Routers";
 
 ReactDOM.render(
   <BrowserRouter>
