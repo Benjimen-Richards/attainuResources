@@ -2,16 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Userdata from "./Week22day2/Userdata";
-// import Xyz from "./Week22day2/xyz";
+// import Userdata from "./Week22day2/Userdata";
+import { BrowserRouter } from "react-router-dom";
+import Routers from "./Week22day2/Routers";
 
 ReactDOM.render(
-  // <BrowserRouter>
-  //   <Routers />
-  // </BrowserRouter>,
-  <>
-    <Userdata />
-  </>,
+  <BrowserRouter>
+    <Routers />
+  </BrowserRouter>,
+
   document.getElementById("root")
 );
 

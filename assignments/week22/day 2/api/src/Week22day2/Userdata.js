@@ -1,19 +1,15 @@
 import axios from "axios";
-// import Xyz from "./xyz";
-import React from "react";
-import xyz from "./xyz";
-import Xyz from "./xyz";
-class Userdata extends React.Component {
-  state = {
-    message: [],
-  };
-  componentDidMount() {
-    fetch("https://dog.ceo/api/breeds/image/random Fetch!")
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({ message: data.message });
-      });
-  }
-  render() {
-  }
+import React, { useEffect, useState } from "react";
+const Userdata = () => {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    async function getdata() {
+      const res = axios.get("https://jsonplaceholder.typicode.com/posts");
+      setItems(res);
+      console.log(res);
+    }
+    getdata();
+  });
+  return <ul></ul>;
+};
 export default Userdata;
