@@ -1,0 +1,11 @@
+.App {
+  /* background-color: beige; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.List {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+}
