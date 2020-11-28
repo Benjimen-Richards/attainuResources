@@ -65,7 +65,7 @@ class FormJs extends React.Component {
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input
-              //   type="email"
+              type="email"
               name="email"
               value={this.state.email}
               onChange={this.changeHandler}

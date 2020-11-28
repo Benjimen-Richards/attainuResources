@@ -1,0 +1,9 @@
+.Form {
+  margin: 30px;
+  width: 500px;
+  text-align: center;
+}
+.Formbody {
+  display: flex;
+  justify-content: center;
+}
