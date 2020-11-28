@@ -10,7 +10,7 @@ ReactDOM.render(
     <Router />
   </BrowserRouter>,
   // <React.StrictMode>
-  //   <Flexbox />
+  //   <Message />
   // </React.StrictMode>,
   document.getElementById("root")
 );

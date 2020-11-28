@@ -18,6 +18,8 @@ const Linking = () => {
         <Link to="/">Home</Link>
         <Link to="/profile">profile</Link>
         <Link to="/flexbox">Flexbox</Link>
+        <Link to="/api">Api</Link>
+        <Link to="/Csscolour">Css color Change</Link>
       </div>
     </div>
   );
