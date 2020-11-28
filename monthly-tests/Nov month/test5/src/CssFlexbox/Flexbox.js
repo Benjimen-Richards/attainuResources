@@ -1,7 +1,7 @@
 import "./Flexbox.css";
 const Flexbox = () => {
   return (
-    <>
+    <div className="bodyF">
       <div className="Box">
         <img
           className="image"
@@ -18,7 +18,7 @@ const Flexbox = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Flexbox;

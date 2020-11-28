@@ -9,9 +9,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Router />
   </BrowserRouter>,
-  // <React.StrictMode>
-  //   <Message />
-  // </React.StrictMode>,
   document.getElementById("root")
 );
 

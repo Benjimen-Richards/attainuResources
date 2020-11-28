@@ -4,6 +4,12 @@
   border: 10px solid green;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.bodyF {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
 }
 .image {
   width: 300px;
@@ -11,7 +17,6 @@
   margin: 30px;
 }
 .title {
-  border: 1px solid black;
   width: 40%;
   height: 50%;
   display: flex;
