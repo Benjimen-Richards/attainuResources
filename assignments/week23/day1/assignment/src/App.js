@@ -51,7 +51,17 @@ class App extends React.Component {
         onSubmit={(e) => {
           e.preventDefault();
         }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "center",
+          border: "1px solid black",
+          width: "500px",
+          marginLeft: "500px",
+          marginTop: "50px",
+        }}
       >
+        <h1>Todo-List</h1>
         <div>
           <input
             name="task"
@@ -62,28 +72,44 @@ class App extends React.Component {
           <br />
           <span>{this.state.error}</span>
         </div>
-        <div>
+        <div
+          style={{
+            width: "500px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <ul style={{ listStyleType: "none" }}>
             {this.props.todos.map((todo, idx) => (
               <>
-                <li key={idx}>{todo}</li>
-                <input
-                  name="value2"
-                  style={{ visibility: this.state.visibility }}
-                  value={this.state.name}
-                  id={idx}
-                  onChange={this.changehandler}
-                />
+                <div>
+                  <div
+                    style={{
+                      display: "flex",
+                    }}
+                  >
+                    <li key={idx}>{todo}</li>
+                    <input
+                      name="value2"
+                      style={{
+                        visibility: this.state.visibility,
+                      }}
+                      value={this.state.name}
+                      id={idx}
+                      onChange={this.changehandler}
+                    />
+                  </div>
 
-                <button
-                  onClick={() => this.update(idx)}
-                  style={{ visibility: this.state.visibility }}
-                >
-                  update
-                </button>
+                  <button
+                    onClick={() => this.update(idx)}
+                    style={{ visibility: this.state.visibility }}
+                  >
+                    update
+                  </button>
 
-                <button onClick={() => this.edit(idx)}>edit</button>
-                <button onClick={() => this.delete(todo)}>delete</button>
+                  <button onClick={() => this.edit(idx)}>edit</button>
+                  <button onClick={() => this.delete(todo)}>delete</button>
+                </div>
               </>
             ))}
           </ul>
