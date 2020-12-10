@@ -1,7 +1,17 @@
+def solve(num, rev):
+    while num:
+        temp = num % 10
+        rev = rev * 10 + temp
+        num = num//10
+    return rev
+
+
 if __name__ == "__main__":
-    num = -432
+    num = -321
+    rev = 0
     if(num > 0):
-        rev = int(str(num)[::-1])
+        ans = solve(num, rev)
     else:
-        rev = -1 * int(str(num)[1:][::-1])
-    print(rev)
+        num = num * -1
+        ans = -1*solve(num, rev)
+    print(ans)
