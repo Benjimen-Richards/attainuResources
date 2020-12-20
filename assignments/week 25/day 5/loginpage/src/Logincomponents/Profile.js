@@ -37,7 +37,7 @@ class Profile extends React.Component
     componentDidMount()
     {
         fetch(url,{
-            method:'GET',
+            method:'get',
             headers:{
                 'x-access-token':sessionStorage.getItem('logintoken')
             }

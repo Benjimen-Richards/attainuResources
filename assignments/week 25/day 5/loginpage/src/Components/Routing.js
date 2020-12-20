@@ -8,16 +8,15 @@ const Routing =()=>
 {
     return(
         <div>
-<BrowserRouter>
-<div>
-<Navbar/>
-<Route exact path='/' component={Home}/>
-<Route path='/login' component={Login}/>
-<Route path='/register' component={Register}/>
-<Route path='/profile' component={Profile}/>
-</div>
-</BrowserRouter>
-        
+            <BrowserRouter>
+                <div>
+                    <Navbar/>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/login' component={Login}/>
+                    <Route path='/register' component={Register}/>
+                    <Route path='/profile' component={Profile}/>
+                </div>
+            </BrowserRouter>
         </div>
     )
 }
