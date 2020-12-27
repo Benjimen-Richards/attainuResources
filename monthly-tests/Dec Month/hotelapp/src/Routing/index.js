@@ -10,13 +10,14 @@ import LoginComponent from "../Login/Logincomponent"
 import Registercomponent from "../Login/RegisterComponent"
 import User from "../Login/User/Users"
 import Admin from "../NavComponents/Adminpage"
-
+import Profilepage from "../NavComponents/Profile"
+import Userprofile from '../Login/User/Userprofile'
 const Routing = () => {
     return (
         <div>
             <Navbar />
             <Route exact path='/' component={Home} />
-            <Route path='/profile' component={Profile} />
+            <Route path='/profile' component={Profilepage} />
             <Route path='/hoteltype/:id' component={Hotellists} />
             <Route path='/details/:id' component={Details} />
             <Route path='/hotelbooking/:id' component={HotelBooking} />
@@ -25,6 +26,7 @@ const Routing = () => {
             <Route path='/register' component={Registercomponent} />
             <Route path='/users' component={User} />
             <Route path='/admin' component={Admin} />
+            <Route path='/userprofile' component={Userprofile} />
         </div>
     )
 }

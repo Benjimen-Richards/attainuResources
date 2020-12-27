@@ -21,13 +21,13 @@ class Booking extends Component {
                         <td>{item.name}</td>
                         <td>{item.date}</td>
                         <td>{item.status}</td>
-
                     </tr>
                 ))
             )
         }
     }
     render() {
+
 
         return (
             <div>

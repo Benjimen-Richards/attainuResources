@@ -4,7 +4,7 @@ import { Component } from "react";
 
 const bookingsurl = 'http://localhost:9055/Bookings'
 const update = 'http://localhost:9055/Bookings?Orderid='
-const api = axios.create({ update })
+
 class Admin extends Component {
     constructor() {
         super()
@@ -15,41 +15,52 @@ class Admin extends Component {
     renderbookings = (data) => {
         if (data) {
             return (
-                data.map(item =>
-                (
-                    <tr>
-                        <th scope="row">{item.Orderid}</th>
-                        <td>{item.hotelname}</td>
-                        <td>{item.cost}</td>
-                        <td>{item.name}</td>
-                        <td>{item.date}</td>
-                        <td>{item.status}</td>
-                        <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.buttonhandler}>Confirm</button>
-                    </tr>
-                ))
+                data.map((item) => {
+                    if (item.status === 'Pending') {
+                        return (
+                            <tr>
+                                <th scope="row">{item.Orderid}</th>
+                                <td>{item.hotelname}</td>
+                                <td>{item.cost}</td>
+                                <td>{item.name}</td>
+                                <td>{item.date}</td>
+                                <td>{item.status}</td>
+                                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.buttonhandler}>Confirm</button>
+                                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.rejecthandler}>Reject</button>
+                            </tr>
+                        )
+                    }
+                })
             )
         }
-
     }
-    getdata = () => {
+    rejecthandler = (e) => {
+        const value = e.target.value
+        console.log(value)
+        const url = `${bookingsurl}?Orderid=${value}`
+        axios.delete(url).then(res => {
+            console.log(res);
+        }
+        )
 
     }
     buttonhandler = (e) => {
         const value = e.target.value
-        const data = this.state.bookings.filter(item => parseInt(item.Orderid) === parseInt(value))[0]
-        const info = { ...data, status: 'yes' }
-        console.log(info)
-        const re = {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }, body: JSON.stringify(info)
-        };
-        fetch(`http://localhost:9055/Bookings?Orderid=${value}`, re).then(res => res.json()).then(res => console.log(res)).catch(err => console.log(err, 'err'))
+        let data = this.state.bookings.filter(item => parseInt(item.Orderid) === parseInt(value))
+        const info = { ...data, status: 'Confirmed' }
+        const url = `${bookingsurl}?Orderid=${value}`
+        axios.post(url, info).then(res => console.log(res))
+
     }
     render() {
 
+        // if (sessionStorage.getItem('logintoken') == null) {
+        //     alert('Ur not admin')
+        //     this.props.history.push('/login')
+        // }
+        // if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
+        //     this.props.history.push('/profile')
+        // }
         return (
             <div>
                 <table class="table">
@@ -62,7 +73,6 @@ class Admin extends Component {
                             <th scope="col">Date</th>
                             <th scope="col">Status</th>
                             <th scope="col">Confirm</th>
-
                         </tr>
                     </thead>
                     <tbody>
