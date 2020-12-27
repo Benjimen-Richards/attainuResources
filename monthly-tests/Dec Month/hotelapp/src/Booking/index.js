@@ -14,7 +14,8 @@ class HotelBooking extends React.Component {
             error: '',
             phnerror: '',
             status: 'Pending',
-            date: ''
+            date: '',
+            daterr: ''
         };
     }
     changehandler = (e) => {
@@ -55,6 +56,7 @@ class HotelBooking extends React.Component {
                             <label for="psw"><b>Date</b></label>
                             <input type="date" onChange={this.changehandler} name="date" placeholder='Enter your phone number' style={{ width: '100%', height: '50px', padding: '10px' }} />
                             <div></div>
+                            <span>{this.state.daterr}</span>
                             <button onClick={this.buttonhandler}>Submit</button>
                         </div>
                     </div>
@@ -67,9 +69,14 @@ class HotelBooking extends React.Component {
         if (!this.state.name) {
             this.setState({ error: 'Name is required' })
         }
-
         else if (!this.state.phoneNumber) {
             this.setState({ phnerror: 'Phone Number is required' })
+        }
+        else if (this.state.phoneNumber.length < 10) {
+            this.setState({ phnerror: 'Phone Number is less than 10 digits' })
+        }
+        if (!this.state.date) {
+            this.setState({ daterr: 'No date given' })
         }
         else {
             fetch(burl,

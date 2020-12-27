@@ -157,6 +157,45 @@
       "status": "Pending",
       "date": "2020-12-16",
       "id": 10
+    },
+    {
+      "Orderid": 7361,
+      "hotelname": "Roseate House",
+      "name": "alfred",
+      "phoneNumber": "22222",
+      "image": "https://i.ibb.co/pv8Kf4m/roseate.jpg",
+      "cost": "8399",
+      "error": "",
+      "phnerror": "",
+      "status": "Pending",
+      "date": "2021-01-01",
+      "id": 11
+    },
+    {
+      "Orderid": 2136,
+      "hotelname": "Hotel Sayaji",
+      "name": "a",
+      "phoneNumber": "123456",
+      "image": "https://i.ibb.co/6FLGh3D/Syaji.jpg",
+      "cost": "3479",
+      "error": "",
+      "phnerror": "",
+      "status": "Pending",
+      "date": "2020-12-18",
+      "id": 12
+    },
+    {
+      "Orderid": 4387,
+      "hotelname": "Roseate House",
+      "name": "a",
+      "phoneNumber": "1234567894",
+      "image": "https://i.ibb.co/pv8Kf4m/roseate.jpg",
+      "cost": "8399",
+      "error": "Name is required",
+      "phnerror": "Phone Number is required",
+      "status": "Pending",
+      "date": "",
+      "id": 13
     }
   ],
   "users": [
@@ -166,6 +205,34 @@
       "password": "1",
       "role": "admin",
       "id": 1
+    },
+    {
+      "name": "alfred",
+      "email": "d",
+      "password": "ass",
+      "role": "ad",
+      "id": 2
+    },
+    {
+      "name": "a",
+      "email": "aa",
+      "password": "a",
+      "role": "a",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "role": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "role": "",
+      "id": 5
     }
   ]
 }

@@ -27,8 +27,6 @@ class Booking extends Component {
         }
     }
     render() {
-
-
         return (
             <div>
                 <table class="table">

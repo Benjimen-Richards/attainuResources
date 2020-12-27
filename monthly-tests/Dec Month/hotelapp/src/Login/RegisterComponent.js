@@ -1,11 +1,11 @@
 import React from 'react';
-const burl = 'http://localhost:9055/users'
+const burl = "http://localhost:5000/api/auth/register"
 class Registercomponent extends React.Component {
     state = {
         name: '',
         email: '',
         password: '',
-        role: ''
+
     }
     handlerchange = (e) => {
         const name = e.target.name
@@ -15,6 +15,7 @@ class Registercomponent extends React.Component {
         })
     }
     handleSubmit = () => {
+        // console.log(this.state)
         fetch(burl, {
             method: 'POST',
             headers:
@@ -27,6 +28,7 @@ class Registercomponent extends React.Component {
             .then(this.props.history.push('/login'))
 
     }
+
     render() {
         return (
             <div className="container">
@@ -36,22 +38,18 @@ class Registercomponent extends React.Component {
                     </div>
                     <div className="panel-body">
                         <div className="form-group">
-                            <label className="control-label">Name</label>
+                            <label className="control-label"><b>Name</b></label>
                             <input type="text" name="name" value={this.state.name} className="form-control"
                                 onChange={this.handlerchange} />
                         </div>
                         <div className="form-group">
-                            <label className="control-label">Email</label>
-                            <input type="text" name="email" value={this.state.email} className="form-control"
+                            <label className="control-label"><b>Email</b></label>
+                            <input type="email" name="email" value={this.state.email} className="form-control"
                                 onChange={this.handlerchange} />
                         </div>
+
                         <div className="form-group">
-                            <label className="control-label">role</label>
-                            <input type="text" name="role" value={this.state.role} className="form-control"
-                                onChange={this.handlerchange} />
-                        </div>
-                        <div className="form-group">
-                            <label className="control-label">Password</label>
+                            <label className="control-label"><b>Password</b></label>
                             <input type="password" name="password" value={this.state.password} className="form-control"
                                 onChange={this.handlerchange} />
                         </div>

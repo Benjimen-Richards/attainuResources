@@ -20,6 +20,7 @@ class LoginComponent extends Component {
         this.setState({ password: event.target.value })
     }
     handleSubmit = () => {
+        // console.log(this.state)
         fetch(burl, {
             method: 'POST',
             headers: {
