@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import '../Css/Navbar.css'
 const Navbar = () => {
-    const logoutbutton = () => {
-        if (sessionStorage.getItem('logintoken')) {
-            <button >Logout</button>
-        }
-    }
+    const token = sessionStorage.getItem('logintoken')
+    console.log(token)
+
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        < nav class="navbar navbar-expand-lg navbar-light bg-light" >
             <div class="container-fluid">
                 <Link class="navbar-brand" to="/">
                     Triping.com
@@ -44,17 +42,22 @@ const Navbar = () => {
                                 Admin
                         </Link>
                         </li>
+                        <li class="nav-item">
+                            <Link class="nav-link" to="/profile">
+                                Profile
+                        </Link>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <ul class="nav navbar-nav navbar-right" id='navbarlogin' >
                         <Link to='/register'><button type="button" class="btn btn-primary">Register</button></Link>
                         <Link to='/login'><button type="button" class="btn btn-primary">Login</button></Link>
-                        {logoutbutton}
+
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 export default Navbar;

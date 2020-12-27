@@ -3,7 +3,7 @@ import axios from "axios";
 import { Component } from "react";
 
 const bookingsurl = 'http://localhost:9055/Bookings'
-const update = 'http://localhost:9055/Bookings?Orderid='
+
 
 class Admin extends Component {
     constructor() {
