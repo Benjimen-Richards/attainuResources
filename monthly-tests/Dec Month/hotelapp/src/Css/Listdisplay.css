@@ -1,0 +1,6 @@
+.flex-container {
+  display: flexbox;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  overflow-x: hidden;
+}

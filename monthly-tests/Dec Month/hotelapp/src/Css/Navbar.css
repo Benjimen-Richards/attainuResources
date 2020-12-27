@@ -1,0 +1,5 @@
+#navbarlogin
+{
+    display: flex; width: 300px; padding: 10px; font-size: 18px; color: black;
+    justify-content: space-evenly;
+}
