@@ -14,24 +14,17 @@ class Admin extends Component {
     }
     renderbookings = (data) => {
         if (data) {
-            return (
-                data.map((item) => {
-                    if (item.status === 'Pending') {
-                        return (
-                            <tr>
-                                <th scope="row">{item.Orderid}</th>
-                                <td>{item.hotelname}</td>
-                                <td>{item.cost}</td>
-                                <td>{item.name}</td>
-                                <td>{item.date}</td>
-                                <td>{item.status}</td>
-                                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.buttonhandler}>Confirm</button>
-                                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.rejecthandler}>Reject</button>
-                            </tr>
-                        )
-                    }
-                })
-            )
+            return data.map(item =>
+            (<tr>
+                <th scope="row">{item.Orderid}</th>
+                <td>{item.hotelname}</td>
+                <td>{item.cost}</td>
+                <td>{item.name}</td>
+                <td>{item.date}</td>
+                <td>{item.status}</td>
+                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.buttonhandler}>Confirm</button>
+                <button value={item.Orderid} style={{ color: 'black', border: '1px solid black' }} onClick={this.rejecthandler}>Reject</button>
+            </tr>))
         }
     }
     rejecthandler = (e) => {
@@ -54,13 +47,12 @@ class Admin extends Component {
     }
     render() {
 
-        // if (sessionStorage.getItem('logintoken') == null) {
-        //     alert('Ur not admin')
-        //     this.props.history.push('/login')
-        // }
-        // if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
-        //     this.props.history.push('/profile')
-        // }
+        if (sessionStorage.getItem('logintoken') == null) {
+            this.props.history.push('/login')
+        }
+        if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
+            this.props.history.push('/profile?message=You Are Not Admin')
+        }
         return (
             <div>
                 <table class="table">

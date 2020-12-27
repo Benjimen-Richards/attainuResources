@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import '../Css/Navbar.css'
 const Navbar = () => {
+    const logoutbutton = () => {
+        if (sessionStorage.getItem('logintoken')) {
+            <button >Logout</button>
+        }
+    }
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -45,9 +50,7 @@ const Navbar = () => {
                     <ul class="nav navbar-nav navbar-right" id='navbarlogin' >
                         <Link to='/register'><button type="button" class="btn btn-primary">Register</button></Link>
                         <Link to='/login'><button type="button" class="btn btn-primary">Login</button></Link>
-
-
-
+                        {logoutbutton}
                     </ul>
                 </div>
             </div>

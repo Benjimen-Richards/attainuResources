@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import User from './Users';
+import UserDisplay from './Userdisplay'
 
 const url = " http://localhost:5000/api/auth/users";
 
@@ -14,7 +13,7 @@ class UserList extends Component {
     }
 
     render() {
-        // console.log('user',this.state.users)
+        console.log('user', this.state.users)
         if (sessionStorage.getItem('logintoken') == null) {
             this.props.history.push('/login')
         }
@@ -22,7 +21,7 @@ class UserList extends Component {
             this.props.history.push('/profile?message=You Are Not Admin')
         }
         return (
-            <User data={this.state.users} />
+            <UserDisplay data={this.state.users} />
         )
     }
 
