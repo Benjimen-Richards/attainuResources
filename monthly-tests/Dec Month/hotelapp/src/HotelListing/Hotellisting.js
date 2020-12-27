@@ -14,14 +14,22 @@ class Hotellisting extends React.Component {
 
   setdata = (data) => {
     console.log(data);
-    this.setState({ hotelsdata: data });
+    if (data) {
+      this.setState({ hotelsdata: data });
+    }
+    else {
+      return (<h1>no data found for given options</h1>)
+    }
   };
   setcostfilter = (data) => {
-    console.log(data);
+    console.log(data.length);
     if (data) {
       this.setState({
         hotelsdata: data,
       });
+    }
+    else {
+      return (<h1>No data found for given options</h1>)
     }
   };
   render() {

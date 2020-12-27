@@ -42,6 +42,10 @@ class Costfilter extends React.Component {
               No filter
             </label>
             <label className="radio">
+              <input type="radio" value="2000" name="cost" />
+              less than 2000
+            </label>
+            <label className="radio">
               <input type="radio" value="3000" name="cost" />
               less than 3000
             </label>
