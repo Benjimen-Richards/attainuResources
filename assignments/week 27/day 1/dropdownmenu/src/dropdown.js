@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 const url = 'http://localhost:1234/data'
+
 class Dropdown extends Component {
     constructor() {
         super()
@@ -13,24 +14,28 @@ class Dropdown extends Component {
         if (data) {
             return (
                 data.map(item => (
-                    <option>{item.moviename}</option>))
+                    <option value={item.moviename}>{item.moviename}</option>))
             )
         }
+    }
+    selecthandler = (e) => {
+        console.log(e.target.value)
+        alert(e.target.value)
     }
     handler = (e) => {
         console.log(e.target.name, e.target.value)
         this.setState({ [e.target.name]: e.target.value })
     }
     changehandler = () => {
-        // let data = JSON.stringify(this.state.input)
-        axios.post(url, ...this.state.input)
+        axios.post(url, { moviename: this.state.input }).then(res => alert(` added,reload the page`))
+        this.setState({ input: '' })
     }
     render() {
         console.log(this.state.input)
         return (
             <div>
-                <select>
-                    <option>---select--</option>
+                <select onChange={this.selecthandler}>
+
                     {this.renderselect(this.state.data)}
                 </select>
                 <input name='input' value={this.state.input} onChange={this.handler} />
