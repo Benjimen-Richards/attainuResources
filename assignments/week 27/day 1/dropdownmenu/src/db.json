@@ -1,0 +1,45 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "moviename": "Avenger",
+      "movieimage": "https://i.redd.it/gnv94oll6im01.jpg"
+    },
+    {
+      "id": 2,
+      "moviename": "Hulk",
+      "movieimage": "https://i.pinimg.com/originals/f8/fa/7d/f8fa7df4b89ff52815004d466fb7a2bc.jpg"
+    },
+    {
+      "id": 3,
+      "moviename": "Polar",
+      "movieimage": "https://i.pinimg.com/474x/f7/e5/0f/f7e50f6434185ecd0702a43b141612ee.jpg"
+    },
+    {
+      "id": 4,
+      "moviename": "Wolf of wall street",
+      "movieimage": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg"
+    },
+    {
+      "id": 5,
+      "moviename": "Casino",
+      "movieimage": "https://images-na.ssl-images-amazon.com/images/I/513wxpquZKL._AC_.jpg"
+    }
+  ],
+  "cart": [
+    [
+      {
+        "id": 3,
+        "moviename": "Polar",
+        "movieimage": "https://i.pinimg.com/474x/f7/e5/0f/f7e50f6434185ecd0702a43b141612ee.jpg"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "moviename": "Avenger",
+        "movieimage": "https://i.redd.it/gnv94oll6im01.jpg"
+      }
+    ]
+  ]
+}

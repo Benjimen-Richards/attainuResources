@@ -47,12 +47,12 @@ class Admin extends Component {
     }
     render() {
 
-        if (sessionStorage.getItem('logintoken') == null) {
-            this.props.history.push('/login')
-        }
-        if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
-            this.props.history.push('/profile?message=You Are Not Admin')
-        }
+        // if (sessionStorage.getItem('logintoken') == null) {
+        //     this.props.history.push('/login')
+        // }
+        // if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
+        //     this.props.history.push('/profile?message=You Are Not Admin')
+        // }
         return (
             <div>
                 <table class="table">

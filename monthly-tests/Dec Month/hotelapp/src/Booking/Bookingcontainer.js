@@ -38,7 +38,6 @@ class Booking extends Component {
                             <th scope="col">Name of customer</th>
                             <th scope="col">Date</th>
                             <th scope="col">Status</th>
-
                         </tr>
                     </thead>
                     <tbody>
