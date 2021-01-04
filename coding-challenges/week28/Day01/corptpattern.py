@@ -3,13 +3,13 @@
 
 
 
-ary = [ 1, 2, 3, 6, 4,3]
+array = [ 1, 2, 3, 4, 5,3]
 n = 0
 
-for i in range(len(ary)):
+for i in range(len(array)):
     n+=1
-    if n not in ary:
-        ary.append(n)
+    if n not in array:
+        array.append(n)
     else:
-        ary.remove(n)
-print(ary)
+        array.remove(n)
+print(array)
