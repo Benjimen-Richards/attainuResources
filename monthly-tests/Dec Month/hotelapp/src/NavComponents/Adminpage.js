@@ -42,7 +42,8 @@ class Admin extends Component {
         let data = this.state.bookings.filter(item => parseInt(item.Orderid) === parseInt(value))
         const info = { ...data, status: 'Confirmed' }
         const url = `${bookingsurl}?Orderid=${value}`
-        axios.post(url, info).then(res => console.log(res))
+        console.log('alf', data)
+        axios.post(url, info).then(res => console.log('alfred', res))
 
     }
     render() {

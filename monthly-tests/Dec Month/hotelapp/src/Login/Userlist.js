@@ -14,12 +14,12 @@ class UserList extends Component {
 
     render() {
         console.log('user', this.state.users)
-        // if (sessionStorage.getItem('logintoken') == null) {
-        //     this.props.history.push('/login')
-        // }
-        // if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
-        //     this.props.history.push('/profile?message=You Are Not Admin')
-        // }
+        if (sessionStorage.getItem('logintoken') == null) {
+            this.props.history.push('/login')
+        }
+        if (sessionStorage.getItem('logintoken') !== null && sessionStorage.getItem('roletoken') !== "Admin") {
+            this.props.history.push('/profile?message=You Are Not Admin')
+        }
         return (
             <UserDisplay data={this.state.users} />
         )
