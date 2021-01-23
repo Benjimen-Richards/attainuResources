@@ -1,0 +1,5 @@
+system information is win32
+system memory is 613011456
+system xbit is x64
+system core is 4
+system memory is 612986880
