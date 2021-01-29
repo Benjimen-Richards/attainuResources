@@ -1,20 +1,53 @@
-def leftRotate(arr, d, n):
-    for i in range(d):
-        leftRotatebyOne(arr, n)
+def pivotedBinarySearch(arr, n, key):
+
+    pivot = findPivot(arr, 0, n-1)
+
+    if pivot == -1:
+        return binarySearch(arr, 0, n-1, key)
+    if arr[pivot] == key:
+        return pivot
+    if arr[0] <= key:
+        return binarySearch(arr, 0, pivot-1, key)
+    return binarySearch(arr, pivot + 1, n-1, key)
 
 
-def leftRotatebyOne(arr, n):
-    temp = arr[0]
-    for i in range(n-1):
-        arr[i] = arr[i+1]
-    arr[n-1] = temp
+def findPivot(arr, low, high):
+
+    # base cases
+    if high < low:
+        return -1
+    if high == low:
+        return low
+
+    mid = int((low + high)/2)
+
+    if mid < high and arr[mid] > arr[mid + 1]:
+        return mid
+    if mid > low and arr[mid] < arr[mid - 1]:
+        return (mid-1)
+    if arr[low] >= arr[mid]:
+        return findPivot(arr, low, mid-1)
+    return findPivot(arr, mid + 1, high)
 
 
-def printArray(arr, size):
-    for i in range(size):
-        print("%d" % arr[i], end=" ")
+def binarySearch(arr, low, high, key):
+
+    if high < low:
+        return -1
+
+    # low + (high - low)/2;
+    mid = int((low + high)/2)
+
+    if key == arr[mid]:
+        return mid
+    if key > arr[mid]:
+        return binarySearch(arr, (mid + 1), high,
+                            key)
+    return binarySearch(arr, low, (mid - 1), key)
 
 
-arr = [1, 2, 3, 4, 5]
-leftRotate(arr, 2, 5)
-printArray(arr, 5)
+arr1 = [1, 2, 3, 4, 5]
+n = len(arr1)
+key = 3
+print("Index of the element is : ",
+      pivotedBinarySearch(arr1, n, key))
