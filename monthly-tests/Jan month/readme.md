@@ -116,3 +116,46 @@ ans:
     ->it uses update commond to update
     ->it uses Remove commond to delete
     ->NoSQL are better for unstructured data like documents or JSON.
+
+9) Explain Producer-Consumer problem?
+ans:Producer-consumer are provided with fixed number of buffer space.
+The problem is :
+->One producer is used to produce the data and pass it to buffer and one consumer is used to consume the data
+->The producer should produce data on when the buffer is not full and in same way consumer should consume data when the buffer is not empty.
+->And the both are not allow to do their job at same time.
+
+Solution:
+->in order to tackle this the we use three Semaphore variables:
+    ->Semaphore S: This semaphore variable is used to achieve mutual exclusion between processes. By using this variable, either Producer or Consumer will be allowed to use or access the shared buffer at a particular time. This variable is set to 1 initially.
+
+    ->Semaphore E: This semaphore variable is used to define the empty space in the buffer. Initially, it is set to the whole space of the buffer i.e. "n" because the buffer is initially empty.
+
+    ->Semaphore F: This semaphore variable is used to define the space that is filled by the producer. Initially, it is set to "0" because there is no space filled by the producer initially.
+The above code can be summarized as:
+    ->while() is used to produce data continuosly
+
+    ->produce() function is called to produce data by the producer.
+
+    ->wait(E) will reduce the value of the semaphore variable "E" by one i.e. when the producer produces something then there is a decrease in the value of the empty space in the buffer. If the buffer is full i.e. the vale of the semaphore variable "E" is "0", then the program will stop its execution and no production will be done.
+
+    ->wait(S) is used to set the semaphore variable "S" to "0" so that no other process can enter into the critical section.
+
+    ->append() function is used to append the newly produced data in the buffer.
+
+    ->signal(s) is used to set the semaphore variable "S" to "1" so that other processes can come into the critical section now because the production is done and the append operation is also done.
+
+    ->signal(F) is used to increase the semaphore variable "F" by one because after adding the data into the buffer, one space is filled in the buffer and the variable "F" must be updated.
+
+10)Differentiate between normalization and denormalization.?
+ans:-Normalization:
+        ->Normalization is used to remove redundant data from the database and to store non-redundant and consistent data into it.
+        ->it is focused on clearing the unsent data and reduce data inconsistency
+        ->due to clearing of data,the number of tables are less 
+        ->Memory is optimised and faster in performance
+
+    -Denormalization:
+    ->Denormalization is used to combine multiple table data into one so that it can be queried quickly.
+    ->it focus on redundancy to execute queries faster .
+    ->due to data integration.tables are more in number.
+    ->it uses more memory
+    ->it does not maintain any data integrity.
