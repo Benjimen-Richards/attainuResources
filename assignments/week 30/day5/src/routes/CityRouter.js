@@ -27,8 +27,18 @@ function router(menu) {
   cityRouter.route('/details/:id')
     .get(function (req, res) {
       var id = req.params.id
-      var name = req.query.name
-      res.send(`City Details for id>>>${id} & ${name}`)
+      mongodb.connect(url, (err, connection) => {
+        if (err) res.status(500).send('Error while connection')
+        else {
+          const dbo = connection.db('benjimen')
+          dbo.collection('hotels').findOne({ _id: id }, (err, data) => {
+            if (err) res.status(501).send('Error while fetching')
+            else {
+              res.render('citydetails', { title: "City detail page", citydata: data, menu })
+            }
+          })
+        }
+      })
     })
 
   return cityRouter
