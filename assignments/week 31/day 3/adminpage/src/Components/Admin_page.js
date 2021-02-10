@@ -9,9 +9,15 @@ class Admin_page extends Component {
             users: ''
         }
     }
-    deletedata = (e, data) => {
-        e.preventDefault()
-        axios.delete(`${deleturl}${data}`)
+    deletedata = (id) => {
+
+        axios(
+            {
+                method: "DELETE",
+                url: `${deleturl}${id}`
+            }
+        )
+        this.props.history.push('')
     }
     rendertable = (data) => {
         if (data) {
@@ -25,7 +31,7 @@ class Admin_page extends Component {
                     <td>
                         <button class="btn btn-warning">Edit</button>
                         {/* <button class="btn btn-danger">Delete</button> */}
-                        <button class="btn btn-danger" onClick={() => this.deletedata(data._id)}>clicked</button>
+                        <button class="btn btn-danger" onClick={() => this.deletedata(data._id)}>Delete</button>
                     </td>
                 </tr>
             ))
@@ -37,7 +43,7 @@ class Admin_page extends Component {
             <div>
 
                 <h1>Admin page</h1>
-                <form >
+                <div >
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -53,7 +59,7 @@ class Admin_page extends Component {
                             {this.rendertable(this.state.users)}
                         </tbody>
                     </table>
-                </form>
+                </div>
 
             </div>
         )
