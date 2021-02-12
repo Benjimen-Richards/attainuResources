@@ -10,7 +10,6 @@ class Admin_page extends Component {
         }
     }
     deletedata = (id) => {
-
         axios(
             {
                 method: "DELETE",
