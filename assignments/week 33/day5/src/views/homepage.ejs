@@ -1,0 +1,13 @@
+<form action="/profile" method="POST" enctype="multipart/form-data">
+<div>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="enter your name"/>
+</div>
+<div>
+    <%if(error){%>
+        <h3><%=error%></h3>
+        <%}%>
+    <input type="file" name="image"/>
+</div>
+<button type="submit">submit</button>
+</form>
