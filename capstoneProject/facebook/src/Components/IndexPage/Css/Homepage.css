@@ -1,0 +1,29 @@
+.Homepage_container {
+  border: 1px solid #f0f2f5;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+.Homepage_form {
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+}
+.Homepage_form_inputs {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  flex-direction: column;
+}
+.Homepage_form_inputs input {
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 330px;
+  margin: 10px;
+  outline: white;
+  border: none;
+}
