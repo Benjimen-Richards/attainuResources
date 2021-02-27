@@ -154,21 +154,22 @@ This layer is analogous to the transport layer of the OSI model. It is responsib
    1->HTTP and HTTPS – HTTP stands for Hypertext transfer protocol.
    2->SSH – SSH stands for Secure Shell.
    3->NTP – NTP stands for Network Time Protocol.
-   6)For the given cache of size 3 and below inputs tell
-   the cache HIT rate .
-   5 4 3 2 1 3 5 6 7 8 10 15?
-   ans:-
-   =>To calculate a hit ratio, divide the number of cache hits with the sum of the number of cache hits, and the number of cache misses.
-   calculation=>formula=(cache hit/cache miss + cache hit )\*100
-   ->5=71%
-   ->4=57%
-   ->3=50%
-   ->2=40%
-   ->1=25%
-   ->3=50%
-   ->5 =71%
-   ->6=66%
-   ->7=70%
-   ->8=72%
-   ->10=76%
-   ->15=83%
+
+6)For the given cache of size 3 and below inputs tell
+the cache HIT rate .
+5 4 3 2 1 3 5 6 7 8 10 15?
+ans:-
+=>To calculate a hit ratio, divide the number of cache hits with the sum of the number of cache hits, and the number of cache misses.
+calculation=>formula=(cache hit/cache miss + cache hit )\*100
+->5=71%
+->4=57%
+->3=50%
+->2=40%
+->1=25%
+->3=50%
+->5 =71%
+->6=66%
+->7=70%
+->8=72%
+->10=76%
+->15=83%
