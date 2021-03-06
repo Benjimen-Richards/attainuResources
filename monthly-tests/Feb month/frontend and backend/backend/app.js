@@ -5,7 +5,8 @@ app.use(cors())
 const parser= require("body-parser")
 const { get } = require("mongoose")
 const couponroute = require("./Routes/couponroute")
-const googleroute = require("./Passport/googlelogin")
+const googleroute = require("./Passport/googlelogin"))
+const playroute = require("./Routes/playroute")
 const port = 1111
 require('./Database/mongoose')
 app.use(parser.urlencoded({extended:true}))
@@ -17,6 +18,7 @@ app.get('/',(req,res)=>
 
 app.use('/coupon',couponroute)
 app.use('/google',googleroute)
+app.use('/playground',playroute)
 
 
 

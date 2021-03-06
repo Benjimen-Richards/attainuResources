@@ -23,6 +23,9 @@ type:String
         code:{
             type:String
         }
+        ,isactive:{
+            type:Boolean,
+        }
         
     }
 )

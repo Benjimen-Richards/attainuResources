@@ -1,13 +1,12 @@
 const express=require('express')
-const categories = require('../Model/categories')
+const categories = require('../Model/categoriesModel')
 const coupon = require('../Model/coponmodel')
 const couponroute=express.Router()
 const qr=require('qrcode')
-couponroute.post('/add',(req,res)=>
-{
-    const data = new coupon(req.body)
-    data.save().then(()=>res.send("success"))
-})
+couponroute.post('/add',(req,res)=>{
+    const data = new coupon({...req.body,isactive:true})
+    data.save().then(()=>res.send("success"))}
+)
 couponroute.get('/',(req,res)=>
 {
     coupon.find({}).then(result=>res.send(result))

@@ -20,7 +20,6 @@ class Loginpage extends Component{
         return(
             <div>
                 <button onClick={this.buttonhandler}>Login with google</button>
-                <a href="http://localhost:1111/google/auth/google">Sign In with Google</a>
             </div>
         )
     }

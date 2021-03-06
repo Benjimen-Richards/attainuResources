@@ -33,10 +33,6 @@ class Categories extends Component
   }
   render()
   {
-  if(!sessionStorage.getItem("username"))
-  {
-    this.props.history.push('/')
-  }
     return(
       <div>
         {this.rendercategories(this.state.categories)}
@@ -49,6 +45,10 @@ class Categories extends Component
    await  axios.get(data).then(res=>this.setState({coupons:res.data}))
    await  axios.get(categoriesurl).then(res=>this.setState({categories:res.data}))
    await  axios.get(userprofile).then(res=>sessionStorage.setItem("username",res.data.displayName))
+   if(!sessionStorage.getItem("username"))
+  {
+    this.props.history.push('/')
+  }
   }
 }
 export default Categories
