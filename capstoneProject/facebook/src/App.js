@@ -2,9 +2,8 @@ import './App.css';
 import  {BrowserRouter, Route } from 'react-router-dom'
 import Homepage from './Components/IndexPage/Homepage/Homepage';
 import Userprofile from './Components/Userprofile/Userprofile';
-import Navbar from './Components/Userprofile/Nav/Navbar';
+import Navbar from './Components/Nav/Navbar';
 import Newsfeed from './Components/Newsfeed/Newsfeed';
-
 
 function App() {
   return (
