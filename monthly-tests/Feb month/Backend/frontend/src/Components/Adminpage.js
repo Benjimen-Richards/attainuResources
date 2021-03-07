@@ -61,10 +61,11 @@ class Adminpagedashboard extends Component
                             </tr>
                         </thead>
                         <tbody>
-                        {this.rendertable(this.state.allcoupons)}
+                            {this.rendertable(this.state.allcoupons)}
                         </tbody>
                 </table>
-                <Link to='/adminadd'><button>Add coupon</button></Link>
+                <Link to='/adminadd'><button className='btn btn-primary'>Add coupon</button></Link>
+                <Link to='/adduser'><button className='btn btn-primary'>Add User</button></Link>
             </div>
         )
     }

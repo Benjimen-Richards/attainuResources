@@ -6,6 +6,7 @@ require('./Database/mongoose')
 const parser = require("body-parser")
 const googleroute = require("./Passport/googlelogin")
 const Adminroute = require("./Routes/Adminroute")
+const Userroute = require("./Routes/Userroute")
 app.use(cors())
 app.use(parser.urlencoded({extended:true}))
 app.use(parser.json())
@@ -17,5 +18,6 @@ app.get('/',(req,res)=>
 
 app.use('/google',googleroute)
 app.use('/admin',Adminroute)
+app.use('/user',Userroute)
 
 app.listen(port,()=>console.log("Server on 1111"))

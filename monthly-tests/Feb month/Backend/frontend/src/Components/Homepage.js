@@ -1,5 +1,7 @@
+import axios from 'axios'
 import {Component} from 'react'
 const googleurl='http://localhost:1111/google/auth/google'
+const loginurl='http://localhost:1111/user/login'
 class Homepage extends Component{
 
 
@@ -9,7 +11,13 @@ class Homepage extends Component{
     }
     jwthandler=()=>
     {
-        window.location.href=''
+        axios.post(loginurl,{username:"benjimen"}).then(res=>{
+            if(res.data)
+            {sessionStorage.setItem("token",res.data)
+                this.props.history.push('/allcoupons')
+            }})  
+            
+       
     }
     render()
     {
